@@ -63,7 +63,7 @@ $Global:PythonProjectCondaEnvName = $PythonProjectName + "_D" + $PythonProjectCo
 '@
 
 #+# PYKICK:CONFIG ##################################################################################
-$PyKickVersion = "1.0.0"
+$PyKickVersion = "1.0.3"
 $PyKickLogsFolder = "logs"
 $PyKickSrcFolder = "src"
 $PyKickSphinxJsonFolderStructure = @'
@@ -1799,6 +1799,7 @@ function Invoke-PyKick {
 }
 
 function PyKick {
+    [CmdletBinding()]
     param (
         [string]$ProjectName = $PythonProjectName,
         [string]$Description = $PythonProjectDescription,
